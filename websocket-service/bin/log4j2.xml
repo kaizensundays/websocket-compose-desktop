@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} (%t) %-5level [%c{1}] %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.eclipse.jetty" level="INFO"/>
+        <Logger name="org.springframework" level="INFO"/>
+        <Logger name="org.springframework.web" level="DEBUG"/>
+
+        <Logger name="com.kaizensundays" level="ALL"/>
+
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
