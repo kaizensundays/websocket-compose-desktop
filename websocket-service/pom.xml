@@ -12,11 +12,11 @@
         <kotlin.version>1.4.32</kotlin.version>
         <slf4j.version>1.7.25</slf4j.version>
         <log4j.version>2.17.2</log4j.version>
-        <spring.version>5.2.20.RELEASE</spring.version>
+        <spring.version>5.2.21.RELEASE</spring.version>
         <spring.boot.version>2.3.7.RELEASE</spring.boot.version>
         <jackson.version>2.12.6</jackson.version>
         <jackson.version.databind>2.12.6.1</jackson.version.databind>
-        <tomcat.version>8.5.12</tomcat.version>
+        <tomcat.version>8.5.78</tomcat.version>
     </properties>
 
     <dependencies>
