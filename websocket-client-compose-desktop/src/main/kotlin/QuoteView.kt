@@ -1,4 +1,3 @@
-import androidx.compose.desktop.Window
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.width
@@ -12,6 +11,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.application
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import org.slf4j.Logger
@@ -78,8 +79,16 @@ class QuoteView : QuoteListener {
         }
     }
 
-    fun build() = Window(title = "Quotes") {
+    fun build() {
+        application {
+            Window(title = "Quotes", onCloseRequest = ::exitApplication) {
+                MainPanel()
+            }
+        }
+    }
 
+    @Composable
+    fun MainPanel() {
         val subscribeButtonEnabled = remember { mutableStateOf(true) }
 
         sequenceStateMap.putAll(data.map { e ->
