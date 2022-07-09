@@ -3,8 +3,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.20"
-    id("org.jetbrains.compose") version "0.2.0-build132"
+    kotlin("jvm") version "1.6.10"
+    id("org.jetbrains.compose") version "1.1.0"
 }
 
 group = "com.kaizensundays.particles"
@@ -47,9 +47,11 @@ tasks.withType<KotlinCompile>() {
 compose.desktop {
     application {
         mainClass = "QuoteViewMain"
+/*
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "websocket-client-compose-desktop"
         }
+*/
     }
 }
